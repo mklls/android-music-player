@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:paddingVertical="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="10dp">
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/takagisan_min" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_below="@id/target"
+        android:layout_alignLeft="@id/target"
+        android:id="@+id/album"
+        android:paddingVertical="5dp"
+        android:layout_width="wrap_content"
+        android:maxWidth="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/album"
+        android:textSize="16sp"
+        android:singleLine="true"/>
+    <TextView
+        android:layout_below="@id/album"
+        android:layout_alignLeft="@id/target"
+        android:id="@+id/artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:textSize="15sp"
+        android:text="artist"
+        android:singleLine="true"/>
+
+</RelativeLayout>

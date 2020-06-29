@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_music">
+
+    <fragment
+        android:id="@+id/navigation_music"
+        android:name="com.pan.musicplayer.fragment.MusicFragment"
+        android:label="@string/music"
+        tools:layout="@layout/fragment_playlist">
+        <argument
+            android:name="test"
+            app:argType="string"
+            android:defaultValue="Hello Test" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_playlist"
+        android:name="com.pan.musicplayer.fragment.PlaylistFragment"
+        android:label="@string/playlist"
+        tools:layout="@layout/fragment_playlist" />
+
+    <fragment
+        android:id="@+id/navigation_album"
+        android:name="com.pan.musicplayer.fragment.AlbumFragment"
+        android:label="@string/album"
+        tools:layout="@layout/fragment_album"/>
+
+</navigation>

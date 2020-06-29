@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.Main2Activity">
+
+    <TextView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Oh, my n word, ah"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                android:typeface="serif"                     android:maxWidth="295dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:focusedByDefault="true"/>
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/cover_pager"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:clipToPadding="false"
+            android:paddingHorizontal="20dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:paddingHorizontal="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="陪着你才能闪烁直到不可asdasdfasdffsdfsadf或缺"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:focusedByDefault="true"
+                    android:textColor="#FFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="哈哈"
+                    android:textColor="#EAEAEA"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:focusedByDefault="true"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:tint="@color/dislike"
+                android:id="@+id/like"
+                android:layout_margin="10dp"
+                android:layout_width="36dp"
+                android:layout_weight="0"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:layout_height="36dp"
+                android:src="@drawable/favorite"/>
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFF"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:progressBackgroundTint="#E3E3E3"
+            android:progressTint="#FFF"
+            android:thumbTint="#FFF" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="6dp"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:text="00:00"
+                android:textColor="#EAEAEA" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:text="03:05"
+                android:textColor="#EAEAEA" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="30dp">
+
+            <ImageView
+                android:id="@+id/shuffle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:src="@drawable/shuffle"
+                android:tint="#FFF" />
+
+            <ImageView
+                android:id="@+id/skip_previous"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/playback"
+                android:backgroundTint="#FFF"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:src="@drawable/skip_previous"
+                android:tint="#FFF" />
+
+            <ImageView
+                android:id="@+id/playback"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="30dp"
+                android:backgroundTint="#FFF"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:src="@drawable/play_circle"
+                android:tint="#FFF" />
+
+            <ImageView
+                android:id="@+id/skip_next"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/playback"
+                android:backgroundTint="#FFF"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:src="@drawable/skip_next"
+                android:tint="#FFF" />
+
+            <ImageView
+                android:id="@+id/mode"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#FFF"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:src="@drawable/repeat"
+                android:tint="#FFF" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

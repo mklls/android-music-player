@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+    <string name="music">本地音乐</string>
+    <string name="playlist">播放列表</string>
+    <string name="album">专辑</string>
+    <string name="playback_control">播放控制</string>
+    <string name="morning">早上好</string>
+    <string name="noon">中午好</string>
+    <string name="afternoon">下午好</string>
+    <string name="evening">晚上好</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="search_hint">搜索标题、艺术家或者专辑</string>
+    <string name="not_found">😱 找不到和您查询相符的内容</string>
+    <string name="playlist_add">创建列表</string>
+    <string name="delete">确定要删除吗？</string>
+    <string name="placeholder">The quick brown fox jumps over the lazy dog</string>
+    <string name="channel_name">播放控制</string>
+    <string name="channel_description">控制播放</string>
+</resources>
